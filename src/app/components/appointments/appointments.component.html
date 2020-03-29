@@ -6,7 +6,7 @@
                   <i class="clock outline icon"></i>
                   No upcoming appointment.
                 </div>
-                <div class="ui primary button">Create appointment</div>
+                <div class="ui primary button" (click)="addAppointment()">Create appointment</div>
               </div>
         </div>
         <div *ngIf="isAppointmentCreated">
