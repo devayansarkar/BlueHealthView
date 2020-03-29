@@ -1,14 +1,198 @@
 <div class="tab-component">
     <div class="ui bottom attached segment active">
-        <div *ngIf="!isAppointmentCreated">
-            <div class="ui placeholder segment">
+        <div>
+            <div class="ui placeholder segment" *ngIf="!isAppointmentCreated && !isFormOpen && !isSearchOpen">
                 <div class="ui icon header">
-                  <i class="clock outline icon"></i>
-                  No upcoming appointment.
+                    <i class="clock outline icon"></i>
+                    No upcoming appointment.
                 </div>
-                <div class="ui primary button" (click)="addAppointment()">Create appointment</div>
-              </div>
+                <div class="ui primary button" (click)="openForm()">Create appointment</div>
+            </div>
+            <div *ngIf="isFormOpen">
+                <h4 class="ui horizontal divider header">
+                    Add details to help the doctor
+                </h4>
+                <div class="ui form">
+                    <div class="one field">
+                        <div class="field">
+                            <label>Describe your issues</label>
+                            <textarea rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui link cards">
+                            <div class="ui centered card">
+                                <div class="content">
+                                    <div class="header">Quick update</div>
+                                </div>
+                                <div class="ui bottom attached button green" (click)="searchSlots()">
+                                    <i class="clock icon"></i>
+                                    15 mins
+                                </div>
+                            </div>
+                            <div class="ui centered card">
+                                <div class="content">
+                                    <div class="header">Consultation</div>
+                                </div>
+                                <div class="ui bottom attached button green" (click)="searchSlots()">
+                                    <i class="clock icon"></i>
+                                    30 mins
+                                </div>
+                            </div>
+                            <div class="ui centered card">
+                                <div class="content">
+                                    <div class="header">Session</div>
+                                </div>
+                                <div class="ui bottom attached button green" (click)="searchSlots()">
+                                    <i class="clock icon"></i>
+                                    60 mins
+                                </div>
+                            </div>
+
+                            <div class="ui centered card">
+                                <div class="content">
+                                    <div class="header">Urgent help</div>
+                                </div>
+                                <div class="ui bottom attached button purple" (click)="searchSlots()">
+                                    <i class="clock icon"></i>
+                                    Unknown duration
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="isSearchOpen">
+                <h4 class="ui horizontal divider header">
+                    Available doctors
+                </h4>
+                <div class="ui link cards">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Kristy</a>
+                            <div class="meta">
+                                <span class="date">3 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                27th March 2020, 10:35
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Kristy</a>
+                            <div class="meta">
+                                <span class="date">3 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                27th March 2020, 14:55
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Smith</a>
+                            <div class="meta">
+                                <span class="date">2 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                27th March 2020, 13:35
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Katherine</a>
+                            <div class="meta">
+                                <span class="date">0 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                27th March 2020, 08:00
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Anne</a>
+                            <div class="meta">
+                                <span class="date">3 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                27th March 2020, 17:35
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Kristy</a>
+                            <div class="meta">
+                                <span class="date">3 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                27th March 2020, 18:50
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Anne</a>
+                            <div class="meta">
+                                <span class="date">3 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                28th March 2020, 09:00
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                    <div class="ui centered card">
+                        <div class="content">
+                            <a class="header">Dr. Kristy</a>
+                            <div class="meta">
+                                <span class="date">3 sessions in past</span>
+                            </div>
+                            <div class="description">
+                                28th March 2020, 11:35
+                            </div>
+                        </div>
+                        <div class="ui bottom attached button green" (click)="addAppointment()">
+                            <i class="check icon"></i>
+                            Confirm
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
         <div *ngIf="isAppointmentCreated">
             <h4 class="ui horizontal divider header">
                 Next appointment
@@ -120,3 +304,4 @@
             </div>
         </div>
     </div>
+</div>

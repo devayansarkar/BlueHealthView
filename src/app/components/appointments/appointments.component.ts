@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentsComponent implements OnInit {
   isAppointmentCreated = false;
+  isFormOpen = false;
+  isSearchOpen = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,5 +16,19 @@ export class AppointmentsComponent implements OnInit {
 
   addAppointment(){
     this.isAppointmentCreated = true;
+    this.isFormOpen = false;
+    this.isSearchOpen = false;
+  }
+ 
+  openForm(){
+    this.isAppointmentCreated = false;
+    this.isFormOpen = true;
+    this.isSearchOpen = false;
+  }
+
+  searchSlots(){
+    this.isAppointmentCreated = false;
+    this.isFormOpen = false;
+    this.isSearchOpen = true;
   }
 }
