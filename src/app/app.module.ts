@@ -8,14 +8,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from './modules/core/core.module';
-import { FeedbackComponent } from './components/appointments/feedback/feedback.component';
-import { PrescriptionComponent } from './components/appointments/prescription/prescription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FeedbackComponent,
-    PrescriptionComponent,
   ],
   imports: [
     BrowserModule,
