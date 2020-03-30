@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppointmentsComponent } from 'src/app/components/appointments/appointments.component';
+import { AppointmentsComponent } from 'src/app/components/appointments-doctors/appointments.component';
 import { AppointmentInstanceComponent } from 'src/app/components/appointment-instance/appointment-instance.component';
 import { AppointmentFeedbackComponent } from 'src/app/components/appointment-feedback/appointment-feedback.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
