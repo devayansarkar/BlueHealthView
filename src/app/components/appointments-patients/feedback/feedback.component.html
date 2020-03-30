@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Hi Mr. {{name}}</h1>
+<div mat-dialog-content>
+  <table class="ui celled table">
+    <tbody>
+      <tr>
+        <td data-label="Name">Take a rest</td>
+      </tr>
+      <tr>
+        <td data-label="Name">Drink a lot of water</td>
+      </tr>
+      <tr>
+        <td data-label="Name">If the situation worsens, please do not hesitate to call me</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div mat-dialog-actions>
+    <button class="ui primary button" (click)="onNoClick()" cdkFocusInitial>Ok</button>
+</div>
