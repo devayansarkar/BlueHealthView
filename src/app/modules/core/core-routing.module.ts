@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppointmentsComponent } from 'src/app/components/appointments-doctors/appointments.component';
+import { AppointmentsComponent as AppointmentsPatientsComponent} from 'src/app/components/appointments-patients/appointments.component';
 import { AppointmentInstanceComponent } from 'src/app/components/appointment-instance/appointment-instance.component';
 import { AppointmentFeedbackComponent } from 'src/app/components/appointment-feedback/appointment-feedback.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
@@ -11,6 +12,7 @@ import { RegisterComponent } from 'src/app/components/register/register.componen
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'appointments', component: AppointmentsComponent },
+    { path: 'patients', component: AppointmentsPatientsComponent },
     { path: 'appointments/:id', component: AppointmentInstanceComponent },
     { path: 'appointmentsFeedback/:id', component: AppointmentFeedbackComponent },
     { path: 'login', component: LoginComponent },
