@@ -10,6 +10,8 @@ import { RegisterComponent } from 'src/app/components/register/register.componen
 import { OnboardComponent } from 'src/app/components/onboard/onboard.component';
 import { HeaderComponent } from 'src/app/components/layout/header/header.component';
 import { FooterComponent } from 'src/app/components/layout/footer/footer.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -27,11 +29,13 @@ import { FooterComponent } from 'src/app/components/layout/footer/footer.compone
   imports: [
     CommonModule,
     CoreRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MatDialogModule
   ]
 })
 export class CoreModule { }
